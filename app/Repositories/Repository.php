@@ -11,5 +11,14 @@ use App\Repositories\Ranking;
 
 class Repository
 {
+    function createDatabase(): void 
+    {
+        DB::unprepared(file_get_contents('database/build.sql'));
+    }
 
+    function insertTeam(array $team): int
+    {
+        return 0;
+    }
+    
 }
